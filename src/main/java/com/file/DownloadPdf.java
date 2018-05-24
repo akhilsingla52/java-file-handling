@@ -24,7 +24,7 @@ public class DownloadPdf {
 	 */
 	public static void main(String... s) throws Exception {
 		ByteArrayOutputStream baos = writePDF();
-		 File outFolder = new File("./pdf");
+		File outFolder = new File("./pdf");
 		if (!outFolder.exists())
 			outFolder.mkdirs();
         OutputStream out = new FileOutputStream(new File("./pdf/new.pdf"));
@@ -78,23 +78,7 @@ public class DownloadPdf {
 		
 		hcell = new PdfPCell(new Phrase("Population", headFont));
 		headerCellStyle(hcell);
-	    table.addCell(hcell);        	
-
-	   /* for (City city : cities) {
-             PdfPCell cell;
-
-             cell = new PdfPCell(new Phrase(city.getId().toString()));
-             valueCellStyle(cell);
-             table.addCell(cell);
-
-             cell = new PdfPCell(new Phrase(city.getName()));
-             valueCellStyle(cell);
-             table.addCell(cell);
-
-             cell = new PdfPCell(new Phrase(String.valueOf(city.getPopulation())));
-             valueCellStyle(cell);
-             table.addCell(cell);
-         }*/
+	    table.addCell(hcell); 
 	    
 	    PdfPCell cell;
 
