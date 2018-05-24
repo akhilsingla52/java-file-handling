@@ -1,0 +1,12 @@
+apply plugin: 'java-library'
+
+
+repositories {
+    //jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    compile('org.apache.poi:poi:3.17')
+    compile('com.itextpdf:itextpdf:5.5.13')
+}
